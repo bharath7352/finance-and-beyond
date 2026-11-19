@@ -1,0 +1,9 @@
+[build]
+  base = "finance-beyond-production"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Next.js intentionally includes this public browser key in client bundles.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY"
